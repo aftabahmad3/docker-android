@@ -1,0 +1,8 @@
+version: '2'
+services:
+  app:
+    image: aftabahmad3/android-docker
+    volumes:
+      - ./:/app
+      - ~/.gradle/:/root/.gradle
+    working_dir: /app
