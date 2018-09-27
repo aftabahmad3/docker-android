@@ -9,7 +9,7 @@ ENV DOCKER_ANDROID_DISPLAY_NAME mobileci-docker
 ENV ANDROID_HOME /android-sdk
 ENV PATH ${ANDROID_HOME}/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools/bin:/bin:$PATH
 
-ARG GRADLE_VERSION="4.1"
+ARG GRADLE_VERSION="4.6"
 ARG ANDROID_SDK_TOOLS_URL="https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip"
 ARG GRADLE_DISTRIBUTION_URL="https://downloads.gradle.org/distributions/gradle-${GRADLE_VERSION}-all.zip"
 
@@ -47,8 +47,8 @@ RUN mkdir ~/.android \
 # Install Platform Tools
 RUN sdkmanager "tools" "platform-tools" \
  && yes | sdkmanager \
-    "platforms;android-27" \
-    "build-tools;27.0.3" \
+    "platforms;android-28" \
+    "build-tools;28.0.2" \
     "extras;android;m2repository" \
     "extras;google;m2repository" \
     "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.2"
